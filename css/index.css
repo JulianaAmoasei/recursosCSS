@@ -1,0 +1,99 @@
+*{
+    font-family: Helvetica, Arial, sans-serif
+}
+
+body{
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+}
+
+header{
+    background: url(../img/mulher.png) no-repeat center bottom,
+                url(../img/banner-bg.jpg);
+    background-size: auto 400px, auto 500px;
+    min-height: 500px;
+
+display: flex;
+justify-content: center;
+align-items: flex-end;
+    /*position: relative;*/
+}
+
+header h1{
+    background-color: #ffffff;
+    padding: 10px;
+    color: #333;
+    /*position: absolute;*/
+    bottom: 0;
+    text-align: center;
+}
+
+.container{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.overflow{
+    width: 100px;
+    height:100px;
+    background-color: blue;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-bottom: 50px;
+}
+
+.opacidade {
+    /*background-color: #9b59b6;
+    opacity: 0.5;
+    OPACIDADE USADA ASSIM AFETA A DIV INTEIRA*/
+    background-color: rgba(241, 52, 255, 0.6)
+    /*OPACIDADE USADA COM RGBA MUDA SÓ A OPACIDADE DO FUNDO*/
+}
+
+/*ESTADOS DOS BOTÕES: HOVER / ACTIVE */
+
+.botao-cta{
+    background-color: #3498db;
+    border-radius: 5px;
+    padding: 10px 25px;
+    color: #FFFFFF;
+    display: block;
+    transition: 0.5s all;
+}
+
+.botao-cta:hover{
+    background-color: red;
+    padding: 20px 50px;
+    transition: 1s padding, 1s background-color;
+}
+
+.botao-cta:active{
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.7) inset;
+}
+
+.caixa-preta {
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    position: relative;
+    animation: mexer-caixa 3s ease-in infinite;
+    animation-play-state: running;
+}
+
+.caixa-preta:hover{
+    animation-play-state: paused;
+}
+
+@keyframes mexer-caixa{
+    /*from {left: 0;
+          background-color: black;}
+    to {left: 400px;
+        background-color: yellow;}*/
+        0% {left: 0;}
+        50% {left: 400px;}
+        100% {left: 0;}
+}
